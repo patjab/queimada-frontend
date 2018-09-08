@@ -118,8 +118,6 @@ class App extends Component {
     return (
       <Fragment>
         <NavigationBar friendRequests={this.state.friendRequests} logout={this.logout} currentUser={this.state.currentUser} onReject={this.onReject} onAccept={this.onAccept}/>
-
-        this.state.currentUser ?
         <Switch>
           // Redirect when not logged in
           <Route path='/signup' render={() => {
@@ -129,7 +127,7 @@ class App extends Component {
             return this.state.currentUser ? <QueimadaContainer socket={this.state.socket} allUsers={this.state.allUsers} currentUser={this.state.currentUser} friendRequests={this.state.friendRequests} createdFriendRequest={this.state.createdFriendRequest}/> : <AuthAction submitAuthAction={this.login} authType='login' errors={this.state.errors}/>
           }}/>
           <Route path='/' component={() => <QueimadaContainer socket={this.state.socket} allUsers={this.state.allUsers} currentUser={this.state.currentUser} friendRequests={this.state.friendRequests} createdFriendRequest={this.state.createdFriendRequest}/>}/>
-        </Switch> : <div>There is no current user.</div>
+        </Switch>
       </Fragment>
     )
   }
