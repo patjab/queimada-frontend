@@ -86,7 +86,7 @@ export default class QueimadaContainer extends Component {
 
   descriptionSplash = () => {
     return (
-      <div>
+      <div><br/><br/><br/><br/><br/>
         Queimada is novel way to talk to people directly.
       </div>
     )
