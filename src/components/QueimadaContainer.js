@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import FriendsListContainer from './FriendsListContainer'
 import InteractiveFriendContainer from './InteractiveFriendContainer'
 
-import AuthAction from './auth/AuthAction.js'
+import AuthAction from '../auth/AuthAction.js'
 
 import {getFriendships, createFriendRequest, deleteFriend, loginUser} from '../adapter/adapter'
 
