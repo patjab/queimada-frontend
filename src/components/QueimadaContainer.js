@@ -67,7 +67,9 @@ export default class QueimadaContainer extends Component {
   login = (email, password) => {
     loginUser(email, password)
     .then(data => {
-      if (!data.error) { this.setUpLoggedInUser(data).then(this.compileAllFriendRequestsIntoState).then(this.setSocket) }
+      if (!data.error) {
+        console.log("DEbug1: ", data)
+        this.setUpLoggedInUser(data).then(this.compileAllFriendRequestsIntoState).then(this.setSocket) }
       else { this.setState({errors: data.error}) }
     })
   }
