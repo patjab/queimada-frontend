@@ -76,9 +76,9 @@ export default class QueimadaContainer extends Component {
       <div id="QueimadaContainer">
         <FriendsListContainer currentUserFriendships={this.state.currentUserFriendships} currentUser={this.props.currentUser} setToCurrentFriend={this.setToCurrentFriend}/>
         <InteractiveFriendContainer addNewFriend={this.addNewFriend} deleteFriend={this.unfriend} friendSuggestions={this.state.friendSuggestions} currentFriend={this.state.currentFriend} currentUser={this.props.currentUser} currentUserFriendships={this.state.currentUserFriendships}/>
-      </div> :
+      </div>
+      :
       <AuthAction submitAuthAction={this.login} authType='login' errors={this.state.errors}/>
-    }}/>
     )
   }
 }
