@@ -84,7 +84,13 @@ export default class QueimadaContainer extends Component {
   //   })
   // }
 
-
+  descriptionSplash = () => {
+    return (
+      <div>
+        Queimada is novel way to talk to people directly.
+      </div>
+    )
+  }
 
   render() {
     return (
@@ -94,9 +100,7 @@ export default class QueimadaContainer extends Component {
         <InteractiveFriendContainer addNewFriend={this.addNewFriend} deleteFriend={this.unfriend} friendSuggestions={this.state.friendSuggestions} currentFriend={this.state.currentFriend} currentUser={this.props.currentUser} currentUserFriendships={this.state.currentUserFriendships}/>
       </div>
       :
-      <div>
-      Queimada is novel way to talk to people directly.
-      </div>
+      this.descriptionSplash()
     )
   }
 }
