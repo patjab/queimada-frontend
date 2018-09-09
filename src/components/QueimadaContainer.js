@@ -2,7 +2,9 @@ import React, {Component} from 'react'
 import FriendsListContainer from './FriendsListContainer'
 import InteractiveFriendContainer from './InteractiveFriendContainer'
 
-import {getFriendships, createFriendRequest, deleteFriend} from '../adapter/adapter'
+import AuthAction from './auth/AuthAction.js'
+
+import {getFriendships, createFriendRequest, deleteFriend, loginUser} from '../adapter/adapter'
 
 export default class QueimadaContainer extends Component {
   state = {
