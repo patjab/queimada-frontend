@@ -61,6 +61,15 @@ export default class QueimadaContainer extends Component {
     this.setState({currentFriend, currentFriendshipId})
   }
 
+  // adapter from App.js
+  login = (email, password) => {
+    loginUser(email, password)
+    .then(data => {
+      if (!data.error) { this.setUpLoggedInUser(data).then(this.compileAllFriendRequestsIntoState).then(this.setSocket) }
+      else { this.setState({errors: data.error}) }
+    })
+  }
+
   render() {
     return (
       this.props.currentUser ?
@@ -68,7 +77,8 @@ export default class QueimadaContainer extends Component {
         <FriendsListContainer currentUserFriendships={this.state.currentUserFriendships} currentUser={this.props.currentUser} setToCurrentFriend={this.setToCurrentFriend}/>
         <InteractiveFriendContainer addNewFriend={this.addNewFriend} deleteFriend={this.unfriend} friendSuggestions={this.state.friendSuggestions} currentFriend={this.state.currentFriend} currentUser={this.props.currentUser} currentUserFriendships={this.state.currentUserFriendships}/>
       </div> :
-      <div></div>
+      <AuthAction submitAuthAction={this.login} authType='login' errors={this.state.errors}/>
+    }}/>
     )
   }
 }
