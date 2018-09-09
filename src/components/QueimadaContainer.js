@@ -95,7 +95,7 @@ export default class QueimadaContainer extends Component {
       </div>
       :
       <div>
-      Queimada is new way to talk to people directly.
+      Queimada is novel way to talk to people directly.
       </div>
     )
   }
