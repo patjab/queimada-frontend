@@ -86,9 +86,9 @@ export default class QueimadaContainer extends Component {
 
   descriptionSplash = () => {
     return (
-      <div id='DescriptionSplash' className="ui massive header" style={{textAlign:'center'}}>
+      <div id='DescriptionSplash' className="ui huge header" style={{textAlign:'center'}}>
         <br/>
-        <img src='./talking-istock.jpg' style={{width:'400%'},{height:'400%'}}/><br/>
+        <img src='./talking-istock.jpg' width='400%' height='400%'/><br/>
         Queimada is novel way to talk to people without the middleman
       </div>
     )
