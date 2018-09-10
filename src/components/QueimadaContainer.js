@@ -87,7 +87,7 @@ export default class QueimadaContainer extends Component {
   descriptionSplash = () => {
     return (
       <Fragment>
-          <br/><br/><br/><br/>
+          <br/><br/><br/><br/><br/><br/>
           <img src='./talking-istock.jpg' className='ui centered large image'/><br/>
         <div id='DescriptionSplash' className="ui centered medium header">
           Queimada is a direct way to chat
