@@ -8,7 +8,7 @@ export default class NavigationBar extends Component {
   render() {
     return (
       <div className="ui inverted massive borderless fixed fluid menu">
-        <a className="header item">Queimada</a>
+        <a className="header item" href="/">Queimada</a>
 
         <div className="right menu">
 
