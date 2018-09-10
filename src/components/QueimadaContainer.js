@@ -90,7 +90,7 @@ export default class QueimadaContainer extends Component {
           <br/><br/><br/><br/>
           <img src='./talking-istock.jpg' className='ui centered large image'/><br/>
         <div id='DescriptionSplash' className="ui centered medium header">
-          Queimada is novel way to talk to people without the middleman
+          Queimada is a direct way to chat
         </div>
       </Fragment>
     )
