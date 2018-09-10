@@ -88,8 +88,8 @@ export default class QueimadaContainer extends Component {
     return (
       <Fragment>
           <br/><br/><br/>
-          <img src='./talking-istock.jpg' className='ui big image'/><br/>
-        <div id='DescriptionSplash' className="ui huge header" style={{textAlign:'center'}}>
+          <img src='./talking-istock.jpg' className='ui centered large image'/><br/>
+        <div id='DescriptionSplash' className="ui centered large header">
           Queimada is novel way to talk to people without the middleman
         </div>
       </Fragment>
