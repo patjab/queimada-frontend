@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {Component, Fragment} from 'react'
 import FriendsListContainer from './FriendsListContainer'
 import InteractiveFriendContainer from './InteractiveFriendContainer'
 
@@ -86,13 +86,15 @@ export default class QueimadaContainer extends Component {
 
   descriptionSplash = () => {
     return (
-      <div className='ui massive'>
-        <br/>
-        <img src='./talking-istock.jpg' className='ui massive'/><br/>
-      </div>
-      <div id='DescriptionSplash' className="ui big header" style={{textAlign:'center'}}>
-        Queimada is novel way to talk to people without the middleman
-      </div>
+      <Fragment>
+        <div className='ui massive'>
+          <br/>
+          <img src='./talking-istock.jpg' className='ui massive'/><br/>
+        </div>
+        <div id='DescriptionSplash' className="ui big header" style={{textAlign:'center'}}>
+          Queimada is novel way to talk to people without the middleman
+        </div>
+      </Fragment>
     )
   }
 
