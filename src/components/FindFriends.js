@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {Component, Fragment} from 'react'
 import FriendInfoCard from './FriendInfoCard'
 
 import {getFriendships} from '../adapter/adapter'
@@ -21,10 +21,12 @@ export default class FindFriends extends Component {
     return (
       <div className="row" id="FindFriends">
         {this.props.friendSuggestions.length > 0 ?
-        <h1 className="ui huge header">Suggested Friends</h1>
-        <div className="ui link cards float left active content">
-          {this.showRandomCards()}
-        </div>
+          <Fragment>
+            <h1 className="ui huge header">Suggested Friends</h1>
+            <div className="ui link cards float left active content">
+              {this.showRandomCards()}
+            </div>
+          </Fragment>
         : <div></div>}
       </div>
     )
