@@ -19,7 +19,7 @@ const compileAllFriendRequestsIntoState = () => {
 
 const setSocket = () => {
   this.setState({
-    socket: this.state.socket || io("http://localhost:4000/")
+    socket: this.state.socket || io("https://queimada-messaging.herokuapp.com/")
   }, () => {
 
     this.state.socket.on('friend request', (friend_request) => {
