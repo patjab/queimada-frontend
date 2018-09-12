@@ -39,7 +39,7 @@ class App extends Component {
 
   setSocket = () => {
     this.setState({
-      socket: this.state.socket || io("http://10.39.111.234:8080")
+      socket: this.state.socket || io("https://queimada-messaging.herokuapp.com/")
     }, () => {
 
       this.state.socket.on('friend request', (friend_request) => {
