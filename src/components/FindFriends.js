@@ -20,12 +20,12 @@ export default class FindFriends extends Component {
   render() {
     return (
       <div className="row" id="FindFriends">
-        this.props.friendSuggestions.length > 0 ?
+        {this.props.friendSuggestions.length > 0 ?
         <h1 className="ui huge header">Suggested Friends</h1>
         <div className="ui link cards float left active content">
           {this.showRandomCards()}
         </div>
-        : <div></div>
+        : <div></div>}
       </div>
     )
   }
