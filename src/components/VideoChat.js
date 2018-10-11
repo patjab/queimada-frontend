@@ -46,26 +46,25 @@ export default class VideoChat extends Component {
         $(`#${id}`).html(video);
         $(`#${id}`).addClass('ui image large'); // Make video element responsive
 
-        // {{"backgroundColor":"black", "color":"white", "fontSize":"30px", "textAlign":"center", "padding":"12px"}}
-        // "backgroundColor: black; color: white; fontSize: 30px; textAlign: center; padding: 12px;"
-        document.getElementById(`topStatus`).style['background-color'] = 'black'
-        document.getElementById(`topStatus`).style['color'] = 'white'
-        document.getElementById(`topStatus`).style['font-size'] = '40px'
-        document.getElementById(`topStatus`).style['text-align'] = 'center'
-        document.getElementById(`topStatus`).style['padding'] = '12px'
-        document.getElementById(`topStatus`).appendChild(document.createElement('BR'))
-        document.getElementById(`topStatus`).innerHTML = `Secure Chat`
+        const topStatus = document.getElementById(`topStatus`)
+        topStatus.style['background-color'] = 'black'
+        topStatus.style['color'] = 'white'
+        topStatus.style['font-size'] = '40px'
+        topStatus.style['text-align'] = 'center'
+        topStatus.style['padding'] = '12px'
+        topStatus.appendChild(document.createElement('BR'))
+        topStatus.innerHTML = `Secure Chat`
 
-
-        document.getElementById(`statusBar`).style['background-color'] = 'black'
-        document.getElementById(`statusBar`).style['color'] = 'white'
-        document.getElementById(`statusBar`).style['font-size'] = '30px'
-        document.getElementById(`statusBar`).style['text-align'] = 'center'
-        document.getElementById(`statusBar`).style['padding'] = '12px'
-        document.getElementById(`statusBar`).appendChild(document.createElement('BR'))
-        document.getElementById(`statusBar`).appendChild(document.createTextNode(`You are now privately chatting with ${this.props.currentFriend.full_name}`))
-        document.getElementById(`statusBar`).appendChild(document.createElement('BR'))
-        document.getElementById(`statusBar`).appendChild(document.createElement('BR'))
+        const statusBar = document.getElementById(`statusBar`)
+        statusBar.style['background-color'] = 'black'
+        statusBar.style['color'] = 'white'
+        statusBar.style['font-size'] = '30px'
+        statusBar.style['text-align'] = 'center'
+        statusBar.style['padding'] = '12px'
+        statusBar.appendChild(document.createElement('BR'))
+        statusBar.appendChild(document.createTextNode(`You are now privately chatting with ${this.props.currentFriend.full_name}`))
+        statusBar.appendChild(document.createElement('BR'))
+        statusBar.appendChild(document.createElement('BR'))
 
         const hangUpButton = document.createElement('BUTTON')
 
@@ -73,7 +72,7 @@ export default class VideoChat extends Component {
         hangUpButton.innerHTML = 'Hang Up'
         hangUpButton.classList = 'ui button negative'
 
-        document.getElementById(`statusBar`).appendChild(hangUpButton)
+        statusBar.appendChild(hangUpButton)
 
         document.getElementById(`allVideos`).style['background-color'] = 'black'
 
