@@ -63,27 +63,6 @@ export default class QueimadaContainer extends Component {
     this.setState({currentFriend, currentFriendshipId})
   }
 
-  // // adapter from App.js
-  // login = (email, password) => {
-  //   loginUser(email, password)
-  //   .then(data => {
-  //     if (!data.error) {
-  //       console.log("DEbug1: ", data)
-  //       this.setUpLoggedInUser(data).then(this.compileAllFriendRequestsIntoState).then(this.setSocket) }
-  //     else { this.setState({errors: data.error}) }
-  //   })
-  // }
-  //
-  // // adapter from App.js
-  // setUpLoggedInUser = (data) => {
-  //   return getCurrentUser(data.token).then(user => {
-  //     this.setState({currentUser: user.user}, () => {
-  //       localStorage.setItem('token', data.token)
-  //       this.props.history.push(`/users`)
-  //     })
-  //   })
-  // }
-
   descriptionSplash = () => {
     return (
       <Fragment>
