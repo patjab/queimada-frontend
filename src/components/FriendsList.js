@@ -20,6 +20,7 @@ export default class FriendsList extends Component {
   }
 
   render() {
+    
     return (
       <div>
         {this.gatherFriendsIntoElements()}
