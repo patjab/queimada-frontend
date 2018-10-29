@@ -5,6 +5,10 @@ import Handlebars from 'handlebars'
 import SimpleWebRTC from 'simplewebrtc'
 
 export default class VideoChat extends Component {
+  state = {
+    calling: false
+  }
+
   componentDidMount() {
     if (this.props.currentUser && Object.keys(this.props.currentFriend).length !== 0) {
       let username = this.props.currentUser.email
@@ -27,12 +31,13 @@ export default class VideoChat extends Component {
       });
 
       $('#join-btn').on('click', (event) => {
+        $(`#join-btn`).html("Calling")
         webrtc.joinRoom(roomName);
-        $(`#join-btn`).remove()
         return false;
       });
 
       webrtc.on('videoAdded', (video, peer) => {
+        $(`#join-btn`).remove()
         const id = webrtc.getDomId(peer);
         const html = remoteVideoTemplate({ id });
 
