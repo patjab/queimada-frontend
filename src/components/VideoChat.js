@@ -49,7 +49,7 @@ export default class VideoChat extends Component {
 
         $('#allVideos').append(html);
         $(`#${id}`).html(video);
-        $(`#${id}`).addClass('ui image large'); // Make video element responsive
+        $(`#${id}`).addClass('ui image large')
 
         const topStatus = document.getElementById(`topStatus`)
         topStatus.style['background-color'] = 'black'
