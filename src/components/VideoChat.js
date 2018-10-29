@@ -52,12 +52,12 @@ export default class VideoChat extends Component {
         $(`#${id}`).addClass('ui image large')
 
         const topStatus = document.getElementById(`topStatus`)
-        topStatus.style = {    
+        topStatus.style = {
           'background-color': 'black',
           'color': 'white',
-          'font-size'] = '40px',
-          'text-align'] = 'center',
-          'padding'] = '12px'
+          'font-size': '40px',
+          'text-align': 'center',
+          'padding': '12px'
         }
 
         topStatus.appendChild(document.createElement('BR'))
