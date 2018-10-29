@@ -52,27 +52,17 @@ export default class VideoChat extends Component {
         $(`#${id}`).addClass('ui image large')
 
         const topStatus = document.getElementById(`topStatus`)
-        topStatus.style = {
-          'background-color': 'black',
-          'color': 'white',
-          'font-size': '40px',
-          'text-align': 'center',
-          'padding': '12px'
-        }
+        topStatus.classList += " activeTopStatus"
 
         topStatus.appendChild(document.createElement('BR'))
         topStatus.innerHTML = `Secure Chat`
 
         const statusBar = document.getElementById(`statusBar`)
-        statusBar.style['background-color'] = 'black'
-        statusBar.style['color'] = 'white'
-        statusBar.style['font-size'] = '30px'
-        statusBar.style['text-align'] = 'center'
-        statusBar.style['padding'] = '12px'
         statusBar.appendChild(document.createElement('BR'))
         statusBar.appendChild(document.createTextNode(`You are now privately chatting with ${this.props.currentFriend.full_name}`))
         statusBar.appendChild(document.createElement('BR'))
         statusBar.appendChild(document.createElement('BR'))
+        statusBar.classList += " activeStatusBar"
 
         const hangUpButton = document.createElement('BUTTON')
 

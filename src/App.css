@@ -49,8 +49,24 @@
 video {
   max-width: 100%;
   width: 320px;
+  border-radius: 30px;
 }
 
+.activeTopStatus {
+  background-color: black;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  padding: 12px;
+}
+
+.activeStatusBar {
+  background-color: black;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  padding: 12px;
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
