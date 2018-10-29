@@ -52,11 +52,14 @@ export default class VideoChat extends Component {
         $(`#${id}`).addClass('ui image large')
 
         const topStatus = document.getElementById(`topStatus`)
-        topStatus.style['background-color'] = 'black'
-        topStatus.style['color'] = 'white'
-        topStatus.style['font-size'] = '40px'
-        topStatus.style['text-align'] = 'center'
-        topStatus.style['padding'] = '12px'
+        topStatus.style = {    
+          'background-color': 'black',
+          'color': 'white',
+          'font-size'] = '40px',
+          'text-align'] = 'center',
+          'padding'] = '12px'
+        }
+
         topStatus.appendChild(document.createElement('BR'))
         topStatus.innerHTML = `Secure Chat`
 
